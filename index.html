@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian's Creative Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+<!-- Floating Background Elements -->
+<div class="floating-elements">
+    <div class="float-shape shape6"></div>
+    <div class="float-shape shape2"></div>
+    <div class="float-shape shape3"></div>
+    <div class="float-shape shape4"></div>
+</div>
+
+<nav class="nav-container">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="goals.html">Goals</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="contact.html">Questions</a>
+    </div>
+</nav>
+
+<header id="home">
+    <div class="animated-background"></div>
+    <div class="header-content">
+        <h1 class="gradient-text">Florian Charles</h1>
+
+        <!-- Profile Image -->
+        <div class="profile-image-container">
+            <img src="ME.jpeg" alt="Florian Charles" class="profile-image">
+        </div>
+
+        <p class="typing-text"></p>
+        <div class="scroll-indicator">
+            <span>Explore More</span>
+            <div class="mouse"></div>
+        </div>
+    </div>
+</header>
+
+<footer>
+    <p>&copy; 2025 Florian Charles. Coded for Housing Manager Position. <br>
+        <em>Warning: </em>  I'll convince ya'll to select me for the position.</p>
+</footer>
+
+<script>
+    // GSAP Animation for profile image
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".profile-image", {
+            opacity: 0,
+            y: -20,
+            duration: 1.5,
+            delay: 0.5,
+            ease: "power3.out"
+        });
+    });
+</script>
+
+</body>
+</html>

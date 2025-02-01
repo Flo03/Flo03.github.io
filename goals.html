@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florian's Creative Showcase - Goals</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <style>
+        h2 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        /* Goal Section */
+        .goal-section {
+            text-align: center;
+            margin-bottom: 6rem;
+        }
+
+        /* Goal Header */
+        .goal-header {
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Goal Description */
+        .goal-description {
+            font-size: 1.3rem;
+            margin-bottom: 3.5rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 8px;
+            width: 70%;
+            background: linear-gradient(to right, var(--primary), yellow);
+            margin: 5rem auto;
+            border-radius: 4px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Goal Grid */
+        .goal-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* Goal Card */
+        .goal-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            width: 320px;
+            height: 320px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Goal Card Image */
+        .goal-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            transition: transform 0.3s ease;
+        }
+
+        /* Overlay Effect */
+        .goal-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.85);
+            color: white;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+
+        /* Show overlay text on hover */
+        .goal-card:hover .goal-overlay {
+            opacity: 1;
+        }
+
+        /* Scale effect on hover */
+        .goal-card:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Overlay Text Styling */
+        .goal-overlay h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .goal-overlay p {
+            font-size: 1.2rem;
+            font-weight: 400;
+            max-width: 85%;
+            line-height: 1.5;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .goal-header {
+                font-size: 1.8rem;
+            }
+
+            .goal-description {
+                font-size: 1.1rem;
+            }
+
+            .goal-card {
+                width: 280px;
+                height: 280px;
+            }
+
+            .goal-overlay h4 {
+                font-size: 1.5rem;
+            }
+
+            .goal-overlay p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Floating Background Elements -->
+<div class="floating-elements">
+    <div class="float-shape shape1"></div>
+    <div class="float-shape shape2"></div>
+    <div class="float-shape shape3"></div>
+    <div class="float-shape shape4"></div>
+    <div class="float-shape shape5"></div>
+    <div class="float-shape shape6"></div>
+</div>
+
+<nav class="nav-container">
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="goals.html">Goals</a>
+        <a href="leadership.html">Leadership</a>
+        <a href="contact.html">Questions</a>
+    </div>
+</nav>
+
+<main>
+    <section id="goals" class="card">
+        <div class="section-content">
+            <h2 class="title"> My Goals as a Housing Manager</h2>
+            <p class="goals-intro">
+                <h3>Every challenge in this role helps me level up.
+            Let's explore how I grow & what pushes me out of my comfort zone! 🎯</h3>
+            </p>
+
+            <!-- Section 1: How It Helps Me Achieve My Goals -->
+            <div class="goal-section">
+                <h3 class="goal-header">🌟 How This Role Helps Me Grow</h3>
+                <div class="goal-grid">
+                    <div class="goal-card">
+                        <img src="https://imageio.forbes.com/specials-images/imageserve/62df7418b50fd7ef6dd194e4/960x0.jpg" alt="Leadership">
+                        <div class="goal-overlay">
+                            <h4>Leadership</h4>
+                            <p>Managing residents helps me make critical decisions and resolve conflicts like a pro.</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <img src="https://img.freepik.com/free-vector/flat-design-business-communication_23-2149151732.jpg" alt="Communication">
+                        <div class="goal-overlay">
+                            <h4>Communication</h4>
+                            <p>From handling concerns to leading meetings, I’ll master clear & effective communication. 🗣️</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <img src="https://www.innovationtraining.org/wp-content/uploads/2022/05/Creative-Problem-Solving-Process.jpeg" alt="Problem Solving">
+                        <div class="goal-overlay">
+                            <h4>Problem Solving</h4>
+                            <p>Unexpected challenges? No problem. This role hones my ability to think fast and adapt. ⚡</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <img src="com.JPG" alt="Community Building">
+                        <div class="goal-overlay">
+                            <h4>Community Building</h4>
+                            <p>By organizing events and engagement activities, I ensure a thriving community! 🏡</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Divider -->
+            <div class="section-divider"></div>
+
+            <!-- Section 2: How It Challenges Me -->
+            <div class="goal-section">
+                <h3 class="goal-header">⚡ How This Role Challenges Me</h3>
+                <p class="goal-description">Growth only happens when I step out of my comfort zone. These challenges keep me sharp!**</p>
+                <div class="goal-grid">
+                    <div class="goal-card">
+                        <img src="https://cdn2.careeraddict.com/uploads/article/63820/organizational-skills.png" alt="Organizational Skill">
+                        <div class="goal-overlay">
+                            <h4>Organization</h4>
+                            <p>Coordinating housing requests, meetings, and events forces me to Stay sharp & structured.</p>
+                        </div>
+                    </div>
+
+                    <div class="goal-card">
+                        <img src="https://cdn.corporatefinanceinstitute.com/assets/time-management.jpg" alt="Time Management">
+                        <div class="goal-overlay">
+                            <h4>Time Management</h4>
+                            <p>With so many responsibilities, mastering time management is a must! ⏳</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2025 Florian Charles. Coded for Housing Manager Position.<br>
+        Achievements: 100% ambition, 0% missed deadlines (hopefully).
+    </p>
+</footer>
+
+</body>
+</html>
